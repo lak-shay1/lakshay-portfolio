@@ -287,7 +287,7 @@ const Contact = () => (
         </div>
         <form
           className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-3"
-          action="https://formspree.io/f/REPLACE_ME"
+          action="https://formspree.io/f/mandkrog"
           method="POST"
         >
           <input
