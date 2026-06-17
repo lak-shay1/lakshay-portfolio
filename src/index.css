@@ -2,11 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --radius: 1rem; }
+@layer base {
+  :root {
+    --background: 222 22% 4%;
+    --foreground: 226 12% 95%;
+    --card: 220 20% 9%;
+    --card-foreground: 226 12% 95%;
+    --popover: 220 20% 9%;
+    --popover-foreground: 226 12% 95%;
+    --primary: 6 100% 71%;
+    --primary-foreground: 222 22% 4%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 226 12% 95%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 222 10% 60%;
+    --accent: 220 15% 12%;
+    --accent-foreground: 226 12% 95%;
+    --destructive: 6 100% 71%;
+    --destructive-foreground: 226 12% 95%;
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 6 100% 71%;
+    --radius: 0.625rem;
+  }
 
-.container { @apply max-w-6xl mx-auto px-4 md:px-6; }
-.card { @apply bg-white border rounded-2xl shadow-card; }
-.badge { @apply inline-flex items-center rounded-full bg-muted px-3 py-1 text-xs; }
-.btn { @apply inline-flex items-center justify-center rounded-xl border px-3 py-2 text-sm font-medium; }
-.btn-primary { @apply bg-black text-white border-black; }
-.btn-ghost { @apply border-transparent; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+
+  * {
+    @apply border-border-custom;
+  }
+
+  body {
+    @apply bg-bg-dark text-text-primary font-inter antialiased;
+  }
+
+  ::selection {
+    background-color: rgba(255, 123, 107, 0.3);
+    color: #F0F1F4;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-28;
+  }
+
+  .content-max-width {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  .page-padding {
+    @apply px-5 md:px-8 lg:px-10;
+  }
+}
